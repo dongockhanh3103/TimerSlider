@@ -6,28 +6,35 @@
     android:layout_height="match_parent"
     tools:context="com.example.ngockhanh.custompathcomponent.MainActivity">
 
-
-
-        <GridView
-            android:layout_marginLeft="10dp"
-            android:id="@+id/DataGridView"
+        <ScrollView
+            android:id="@+id/scollview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:horizontalSpacing="0dp"
-            android:numColumns="3"
-            android:paddingTop="10dp"
-            android:verticalSpacing="0dp">
-        </GridView>
+            android:fillViewport="true">
+                <GridView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/DataGridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:horizontalSpacing="0dp"
+                    android:numColumns="3"
+                    android:paddingTop="10dp"
+                    android:verticalSpacing="0dp">
+                </GridView>
 
 
 
-
+        </ScrollView>
 
         <com.example.ngockhanh.custompathcomponent.Components.SliderTimer
             android:id="@+id/sliderTimer"
             android:layout_width="75dp"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content" />
+
+
+
+
 
 
 

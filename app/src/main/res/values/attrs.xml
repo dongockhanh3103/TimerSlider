@@ -4,6 +4,8 @@
         <attr name="sliderColor" format="color" />
         <attr name="sliderBackground" format="color" />
         <attr name="text" format="string"/>
+        <attr name="timeStarting"  format="string"/>
+        <attr name="timeEnding" format="string"/>
     </declare-styleable>
 
 </resources>

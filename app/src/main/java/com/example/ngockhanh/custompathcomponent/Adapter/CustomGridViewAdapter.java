@@ -12,7 +12,9 @@ import android.widget.TextView;
 import com.example.ngockhanh.custompathcomponent.Models.Program;
 import com.example.ngockhanh.custompathcomponent.R;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -61,7 +63,8 @@ public class CustomGridViewAdapter extends BaseAdapter implements Filterable {
             programHolder=(ProgramHolder) convertView.getTag();
         }
 
-        programHolder.build(getItem(position).getTitle(),getItem(position).getColor());
+        programHolder.build(getItem(position).getTitle(),getItem(position).getColor(),
+                getItem(position).getTimeStarting(),getItem(position).getTimeEnding());
 
         return convertView;
     }
@@ -89,7 +92,8 @@ public class CustomGridViewAdapter extends BaseAdapter implements Filterable {
 
                 for(int i=0;i<filterList.size();i++){
                     if(filterList.get(i).getTitle().toUpperCase().contains(constraint)){
-                        Program program=new Program(filterList.get(i).getTitle(),filterList.get(i).getColor());
+                        Program program=new Program(filterList.get(i).getTitle(),filterList.get(i).getColor()
+                                ,filterList.get(i).getTimeStarting(),filterList.get(i).getTimeEnding());
                         filters.add(program);
                     }
                 }
@@ -118,15 +122,32 @@ public class CustomGridViewAdapter extends BaseAdapter implements Filterable {
     private class ProgramHolder{
         private TextView title;
         private View view;
+        private TextView timeStarting;
+        private TextView timeEnding;
+
 
         private ProgramHolder(View view){
             this.title= (TextView) view.findViewById(R.id.titleProgram);
             this.view = (View) view.findViewById(R.id.bgProgram);
+            this.timeStarting=(TextView) view.findViewById(R.id.timeStart);
+            this.timeEnding = (TextView) view.findViewById(R.id.timeEnd);
+
+
         }
 
-        void build(final String title, final int color){
+        void build(final String title, final int color, Date timeStarting, Date timeEnding){
             this.title.setText(title);
             this.view.setBackgroundColor(color);
+
+            //set format Starting time
+            SimpleDateFormat startTimeFormat = new SimpleDateFormat("EE HH:mm");
+            String datetimeStartingTime=startTimeFormat.format(timeStarting);
+            //set format Ending time
+            SimpleDateFormat endTimeFormat = new SimpleDateFormat("HH:mm");
+            String datetimeEndingTime=endTimeFormat.format(timeEnding);
+
+            this.timeStarting.setText(datetimeStartingTime);
+            this.timeEnding.setText(datetimeEndingTime);
 
         }
     }
