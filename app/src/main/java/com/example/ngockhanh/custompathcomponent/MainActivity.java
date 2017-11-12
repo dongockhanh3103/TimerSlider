@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChangeChanel(String Object) {
                 customGridViewAdapter.getFilter().filter(Object);
-                Toast.makeText(MainActivity.this,Object,Toast.LENGTH_SHORT).show();
+
                 return;
             }
 
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        Log.d("lenght", "getArrTimeStarting: "+listTimeStarting.size());
+
         return listTimeStarting;
     }
 

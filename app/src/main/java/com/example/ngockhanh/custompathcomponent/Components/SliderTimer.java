@@ -64,6 +64,7 @@ public class SliderTimer extends View {
     public int sliderMinHeight = 0;
     public int sliderMaxHeight = 0;
     public int sliderContent;
+    public String currentTimeSlider;
     //Listener
     public ChangeChanel listener;
 
@@ -96,20 +97,12 @@ public class SliderTimer extends View {
         TypedArray ta = getContext().obtainStyledAttributes(set, R.styleable.SliderTimer);
         slColor = ta.getColor(R.styleable.SliderTimer_sliderColor, Color.RED);
 
-        Date currentDateTime = Calendar.getInstance().getTime();
-        SimpleDateFormat df = new SimpleDateFormat("HH:mm a");
-        String currentTime = df.format(currentDateTime.getTime());
-        slText = currentTime + "";
+
+        slText = "";
         mDy = 100;
         mDx = 0;
-         //diffTime= maxTime.getTime()-minTime.getTime();
-
-
 
         itemTimer = new ItemTimer(mDx, mDy, slColor, slText);
-
-
-
         ta.recycle();
 
     }
@@ -117,7 +110,7 @@ public class SliderTimer extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-       // Log.d("Height", "onMeasure: " + heightMeasureSpec);
+        // Log.d("Height", "onMeasure: " + heightMeasureSpec);
         DisplayMetrics displayMetrics = new DisplayMetrics();
         ((Activity) getContext()).getWindowManager()
                 .getDefaultDisplay()
@@ -126,12 +119,13 @@ public class SliderTimer extends View {
         int height = displayMetrics.heightPixels;
         sliderMinHeight = (int) mDy;
         sliderMaxHeight = 1400;
+
         sliderContent = sliderMaxHeight - sliderMinHeight;
+        SimpleDateFormat df = new SimpleDateFormat("EE HH:mm");
+        String time = df.format(this.minTime.getTime());
 
-
-        diffTime=(maxTime.getTime()-minTime.getTime())/60000;
-
-
+        itemTimer.setSlText(time + "");
+        diffTime = (maxTime.getTime() - minTime.getTime()) / 60000;
         setMeasuredDimension(200, height);
 
 
@@ -140,9 +134,11 @@ public class SliderTimer extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+
         if (isInEditMode()) {
             return;
         }
+
         itemTimer.DrawItemTimer(canvas);
     }
 
@@ -168,28 +164,20 @@ public class SliderTimer extends View {
                 }
 
 
+                int mins = (int) roundPercent(this.diffTime, itemTimer.getSlY());
+                Date dt = caculateTime(mins);
+                currentTimeSlider=convertDateToStringFormat(dt);
 
-                // 1min/1pixel
-                //Time per min
-              //  (int) roundPercent(this.diffTime,itemTimer.getSlY()) + ""
-              //  (int) roundPercent(this.diffTime,itemTimer.getSlY()) + ""
-                //à
-                //khi lấy min time, sau đó + thêm phút @@ phải rồi @@
-                //itemTimer.setSlText();
-
-                int mins=  (int) roundPercent(this.diffTime,itemTimer.getSlY());
-                Date dt= caculateTime(mins);
-
-                Log.d("Time", "onTouchEvent: "+dt);
 
                 SimpleDateFormat df = new SimpleDateFormat("EE HH:mm");
                 String currentTime = df.format(dt.getTime());
-                  itemTimer.setSlText(currentTime);
+                String s=convertDateToStringFormat(dt);
+                itemTimer.setSlText(currentTime);
 
 
                 break;
             case MotionEvent.ACTION_UP:
-//                listener.onChangeChanel("b");
+                listener.onChangeChanel(""+currentTimeSlider);
                 break;
         }
         invalidate();
@@ -197,22 +185,49 @@ public class SliderTimer extends View {
         return true;
     }
 
-    Date caculateTime(int mins){
+    String convertDateToStringFormat(Date date){
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        String year=""+calendar.get(Calendar.YEAR);
+        String month=convertForFormat(""+(calendar.get(Calendar.MONTH)+1));
+
+        String day=convertForFormat(""+calendar.get(Calendar.DAY_OF_MONTH));
+        String hour=convertForFormat(""+calendar.get(Calendar.HOUR_OF_DAY));
+        String minutes=convertForFormat(""+calendar.get(Calendar.MINUTE));
+
+
+        return year+month+day+hour+minutes;
+    }
+    Date caculateTime(int mins) {
 
         final java.util.Calendar cal = GregorianCalendar.getInstance();
         cal.setTime(minTime);
-        cal.add(Calendar.MINUTE,mins);
+        cal.add(Calendar.MINUTE, mins);
         return cal.getTime();
     }
 
-    float roundPercent(long diffTime,float y) {
+    String convertForFormat(String time){
+
+        if(time.length()<2){
+            return time ="0"+time;
+        }
+        return time;
+
+    }
+
+    float roundPercent(long diffTime, float y) {
 
 
-        return (float) ((y-100) * (diffTime / 1300.0));
+        return (float) ((y - 100) * (diffTime / 1300.0));
     }
 
     public class ItemTimer {
         private float slX;
+        private float slY;
+        private Paint paintTriangular;
+        private Paint paintRectangle;
+        private Paint paintText;
+
 
         public String getSlText() {
             return slText;
@@ -233,11 +248,6 @@ public class SliderTimer extends View {
             this.slY = slY;
             invalidate();
         }
-
-        private float slY;
-        private Paint paintTriangular;
-        private Paint paintRectangle;
-        private Paint paintText;
 
 
         public ItemTimer(float slX, float slY, int slColor, String slText) {
@@ -260,6 +270,7 @@ public class SliderTimer extends View {
             paintText.setTextAlign(Paint.Align.CENTER);
             paintText.setTextSize(35);
             canvas.drawText(this.slText, slX + 80, slY + 60, paintText);
+
 
 
         }

@@ -1,6 +1,7 @@
 package com.example.ngockhanh.custompathcomponent.Adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +13,11 @@ import android.widget.TextView;
 import com.example.ngockhanh.custompathcomponent.Models.Program;
 import com.example.ngockhanh.custompathcomponent.R;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -86,20 +90,40 @@ public class CustomGridViewAdapter extends BaseAdapter implements Filterable {
             FilterResults results=new FilterResults();
             if(constraint!=null && constraint.length()>0)
             {
-                //Constrain to upper
-                constraint=constraint.toString().toUpperCase();
-                List<Program> filters=new ArrayList<Program>();
 
-                for(int i=0;i<filterList.size();i++){
-                    if(filterList.get(i).getTitle().toUpperCase().contains(constraint)){
-                        Program program=new Program(filterList.get(i).getTitle(),filterList.get(i).getColor()
-                                ,filterList.get(i).getTimeStarting(),filterList.get(i).getTimeEnding());
-                        filters.add(program);
+
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmm");
+                try {
+
+                    Date date = sdf.parse(constraint+"");
+
+                    constraint=constraint.toString().toUpperCase();
+                    List<Program> filters=new ArrayList<Program>();
+
+                    for(int i=0;i<filterList.size();i++){
+
+
+                        Date startingTime=filterList.get(i).getTimeStarting();
+                        Date endingTime=filterList.get(i).getTimeEnding();
+                        if((date.compareTo(startingTime))==1 && date.compareTo(endingTime)==-1){
+
+                            Program program=new Program(filterList.get(i).getTitle(),filterList.get(i).getColor()
+                                    ,filterList.get(i).getTimeStarting(),filterList.get(i).getTimeEnding());
+                            filters.add(program);
+                        }
                     }
+
+                    results.count=filters.size();
+                    results.values=filters;
+
+                } catch (ParseException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
                 }
 
-                results.count=filters.size();
-                results.values=filters;
+
+                //Constrain to upper
+
 
 
             }
