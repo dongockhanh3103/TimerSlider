@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.example.ngockhanh.custompathcomponent.Listener.ChangeChanel;
 import com.example.ngockhanh.custompathcomponent.R;
+import com.tomerrosenfeld.customanalogclockview.CustomAnalogClock;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -36,7 +37,6 @@ import java.util.GregorianCalendar;
 public class SliderTimer extends View {
 
     int slColor;
-
     float mDy;
     float mDx;
     public ItemTimer itemTimer;
@@ -131,6 +131,7 @@ public class SliderTimer extends View {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -145,8 +146,7 @@ public class SliderTimer extends View {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
-        float xItem = event.getX();
-        float yItem = event.getY();
+
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
 
@@ -173,8 +173,6 @@ public class SliderTimer extends View {
                 String currentTime = df.format(dt.getTime());
                 String s=convertDateToStringFormat(dt);
                 itemTimer.setSlText(currentTime);
-
-
                 break;
             case MotionEvent.ACTION_UP:
                 listener.onChangeChanel(""+currentTimeSlider);
@@ -206,8 +204,8 @@ public class SliderTimer extends View {
         return cal.getTime();
     }
 
+    //covert Datetime to format yyyyMMddhhmm
     String convertForFormat(String time){
-
         if(time.length()<2){
             return time ="0"+time;
         }
@@ -265,11 +263,20 @@ public class SliderTimer extends View {
 
 
         void DrawItemTimer(Canvas canvas) {
-            canvas.drawRoundRect(new RectF(slX, slY, slX + 200, slY + 100), 0, 100, paintRectangle);
+            int paddingTop=100;
+            int width=200;
+            canvas.drawRoundRect(new RectF(slX, slY, slX + width, slY + paddingTop), 0, 100, paintRectangle);
 
             paintText.setTextAlign(Paint.Align.CENTER);
             paintText.setTextSize(35);
             canvas.drawText(this.slText, slX + 80, slY + 60, paintText);
+//            CustomAnalogClock clock = null;
+//            clock.init(getContext(), R.drawable.default_face, R.drawable.default_hour_hand, R.drawable.default_minute_hand, 0, false, false);
+//            clock.setX(0);
+//            clock.setY(100);
+//            clock.setScale(100);
+
+
 
 
 
@@ -277,7 +284,5 @@ public class SliderTimer extends View {
 
     }
 
-    public interface SliderListener {
-        void onSlide(float progress);
-    }
+
 }

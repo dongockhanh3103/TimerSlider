@@ -33,14 +33,12 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     GridView gridView;
-    int [] colors={Color.BLACK,Color.RED,Color.BLUE,Color.YELLOW,Color.GRAY,Color.GREEN,Color.WHITE,Color.BLACK,Color.RED,Color.BLUE,Color.YELLOW,Color.GRAY,Color.GREEN,Color.WHITE};
-    String [] titles={"BLACK","RED","BLUE","YELLOW","GRAY","GREEN","WHITE","BLACK","RED","BLUE","YELLOW","GRAY","GREEN","WHITE"};
+    int[] colors = {Color.BLACK, Color.RED, Color.BLUE, Color.YELLOW, Color.GRAY, Color.GREEN, Color.WHITE, Color.BLACK, Color.RED, Color.BLUE, Color.YELLOW, Color.GRAY, Color.GREEN, Color.WHITE};
+    String[] titles = {"BLACK", "RED", "BLUE", "YELLOW", "GRAY", "GREEN", "WHITE", "BLACK", "RED", "BLUE", "YELLOW", "GRAY", "GREEN", "WHITE"};
     List<Date> timeStarting;
 
     List<Date> timeEnding;
     SliderTimer sliderTimer;
-
-
 
 
     @Override
@@ -48,69 +46,65 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        gridView=(GridView) findViewById(R.id.DataGridView);
-        sliderTimer=(SliderTimer) findViewById(R.id.sliderTimer);
 
-
-        final List<Program> programList=new ArrayList<Program>();
+        init();
+        final List<Program> programList = new ArrayList<Program>();
 
         //get Starting time
-        timeStarting=getArrTimeStarting();
-
+        timeStarting = getArrTimeStarting();
         //get Ending time
-        timeEnding=getArrTimeEnding();
+        timeEnding = getArrTimeEnding();
 
-        for(int i=0;i<colors.length;i++){
-            Program program=new Program(titles[i],colors[i],timeStarting.get(i),timeEnding.get(i));
+        for (int i = 0; i < colors.length; i++) {
+            Program program = new Program(titles[i], colors[i], timeStarting.get(i), timeEnding.get(i));
             programList.add(program);
         }
 
-        Date maxDate=Collections.max(timeEnding);
-        //Log.d("Max date", "onCreate: "+ maxDate);
-        Date minDate=Collections.min(timeStarting);
-      //  Log.d("Min date", "onCreate: "+minDate);
+        Date maxDate = Collections.max(timeEnding);
+        Date minDate = Collections.min(timeStarting);
+
 
         sliderTimer.setMaxTime(maxDate);
         sliderTimer.setMinTime(minDate);
-         final CustomGridViewAdapter customGridViewAdapter=new CustomGridViewAdapter(this,programList);
+        final CustomGridViewAdapter customGridViewAdapter = new CustomGridViewAdapter(this, programList);
         gridView.setAdapter(customGridViewAdapter);
         customGridViewAdapter.notifyDataSetChanged();
 
 
-
-        sliderTimer.listener=new ChangeChanel() {
+        sliderTimer.listener = new ChangeChanel() {
             @Override
             public void onChangeChanel(String Object) {
                 customGridViewAdapter.getFilter().filter(Object);
-
                 return;
             }
 
         };
 
-
-
     }
 
-    List<Date> getArrTimeStarting (){
-        //14
+    void init() {
+        gridView = (GridView) findViewById(R.id.DataGridView);
+        sliderTimer = (SliderTimer) findViewById(R.id.sliderTimer);
+    }
 
-        List<Date> listTimeStarting=new ArrayList<Date>();
+    List<Date> getArrTimeStarting() {
+
+        List<Date> listTimeStarting = new ArrayList<Date>();
 
         //yyyyMMddHHmm
-        String[] arrStringDateTime={"201711110730","201711110745","201711110845","201711110900",
-                                "201711110845","201711110830","201711111100",
-                             "201711111130","201711111130","201711111330","201711111430",
-                                "201711111515","201711111700","201711111730"};
-
+        String[] arrStringDateTime =
+                {"201711110730", "201711110745", "201711110845",
+                "201711110900","201711110845", "201711110830", "201711111100",
+                "201711111130", "201711111130", "201711111330", "201711111430",
+                "201711111515", "201711111700", "201711111730"};
 
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmm");
 
-        for(int i=0;i<arrStringDateTime.length;i++){
+        for (int i = 0; i < arrStringDateTime.length; i++) {
             try {
                 Date d = sdf.parse(arrStringDateTime[i]);
-              //  Log.d("Date", "getArrTimeStarting: "+d.toString());
+                //  Log.d("Date", "getArrTimeStarting: "+d.toString());
 
                 listTimeStarting.add(d);
 
@@ -118,24 +112,23 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-
         return listTimeStarting;
     }
 
 
-    List<Date> getArrTimeEnding (){
+    List<Date> getArrTimeEnding() {
         //14
-        List<Date> listTimeEnding=new ArrayList<Date>();
+        List<Date> listTimeEnding = new ArrayList<Date>();
         //yyyyMMddHHmm
-        String[] arrStringDateTime={"201711110830","201711110830","201711111000",
-                "201711111030","201711111045","201711111030","201711111200",
-                "201711111400","201711111330","201711111415","201711111500",
-                "201711111645","201711111800","201711111900"};
-
+        String[] arrStringDateTime =
+                {"201711110830", "201711110830", "201711111000",
+                "201711111030", "201711111045", "201711111030", "201711111200",
+                "201711111400", "201711111330", "201711111415", "201711111500",
+                "201711111645", "201711111800", "201711111900"};
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmm");
 
-        for(int i=0;i<arrStringDateTime.length;i++){
+        for (int i = 0; i < arrStringDateTime.length; i++) {
             try {
                 Date d = sdf.parse(arrStringDateTime[i]);
 
@@ -143,15 +136,9 @@ public class MainActivity extends AppCompatActivity {
             } catch (ParseException ex) {
 
             }
-
         }
-
-
         return listTimeEnding;
     }
-
-
-
 
 
 }

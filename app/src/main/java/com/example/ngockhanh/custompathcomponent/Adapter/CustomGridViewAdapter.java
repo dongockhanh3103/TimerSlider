@@ -32,12 +32,13 @@ public class CustomGridViewAdapter extends BaseAdapter implements Filterable {
     List<Program> filterList;
     CustomFilter filter;
 
-    public CustomGridViewAdapter(Context context, List<Program> listProgram){
-        this.context=context;
-        this.listProgram=listProgram;
-        this.filterList=listProgram;
+    public CustomGridViewAdapter(Context context, List<Program> listProgram) {
+        this.context = context;
+        this.listProgram = listProgram;
+        this.filterList = listProgram;
 
     }
+
     @Override
     public int getCount() {
         return listProgram.size();
@@ -54,67 +55,64 @@ public class CustomGridViewAdapter extends BaseAdapter implements Filterable {
     }
 
 
-
     @Override
     public View getView(int position, View convertView, ViewGroup viewGroup) {
         ProgramHolder programHolder;
-        if( convertView==null){
+        if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(R.layout.list_program, null);
             programHolder = new ProgramHolder(convertView);
             convertView.setTag(programHolder);
-        }
-        else {
-            programHolder=(ProgramHolder) convertView.getTag();
+        } else {
+            programHolder = (ProgramHolder) convertView.getTag();
         }
 
-        programHolder.build(getItem(position).getTitle(),getItem(position).getColor(),
-                getItem(position).getTimeStarting(),getItem(position).getTimeEnding());
+        programHolder.build(getItem(position).getTitle(), getItem(position).getColor(),
+                getItem(position).getTimeStarting(), getItem(position).getTimeEnding());
 
         return convertView;
     }
 
     @Override
     public Filter getFilter() {
-        if(filter==null){
-            filter=new CustomFilter();
+        if (filter == null) {
+            filter = new CustomFilter();
         }
         return filter;
     }
 
     ///INNER CLASS
-    class  CustomFilter extends Filter{
+    class CustomFilter extends Filter {
 
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
 
-            FilterResults results=new FilterResults();
-            if(constraint!=null && constraint.length()>0)
-            {
+            FilterResults results = new FilterResults();
+            if (constraint != null && constraint.length() > 0) {
 
 
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmm");
                 try {
 
-                    Date date = sdf.parse(constraint+"");
+                    Date date = sdf.parse(constraint + "");
 
-                    constraint=constraint.toString().toUpperCase();
-                    List<Program> filters=new ArrayList<Program>();
+                    constraint = constraint.toString().toUpperCase();
+                    List<Program> filters = new ArrayList<Program>();
 
-                    for(int i=0;i<filterList.size();i++){
+                    for (int i = 0; i < filterList.size(); i++) {
 
+                        Date startingTime = filterList.get(i).getTimeStarting();
+                        Date endingTime = filterList.get(i).getTimeEnding();
+                        if (((date.compareTo(startingTime)) == 1 && date.compareTo(endingTime) == -1)
+                                || date.compareTo(startingTime) == 0 || date.compareTo(endingTime) == 0) {
 
-                        Date startingTime=filterList.get(i).getTimeStarting();
-                        Date endingTime=filterList.get(i).getTimeEnding();
-                        if((date.compareTo(startingTime))==1 && date.compareTo(endingTime)==-1){
-
-                            Program program=new Program(filterList.get(i).getTitle(),filterList.get(i).getColor()
-                                    ,filterList.get(i).getTimeStarting(),filterList.get(i).getTimeEnding());
+                            Program program = new Program(filterList.get(i).getTitle(), filterList.get(i).getColor()
+                                    , filterList.get(i).getTimeStarting(), filterList.get(i).getTimeEnding());
                             filters.add(program);
                         }
                     }
 
-                    results.count=filters.size();
-                    results.values=filters;
+                    results.count = filters.size();
+                    results.values = filters;
 
                 } catch (ParseException e) {
                     // TODO Auto-generated catch block
@@ -125,11 +123,9 @@ public class CustomGridViewAdapter extends BaseAdapter implements Filterable {
                 //Constrain to upper
 
 
-
-            }
-            else {
-                results.count=filterList.size();
-                results.values=filterList;
+            } else {
+                results.count = filterList.size();
+                results.values = filterList;
 
             }
             return results;
@@ -137,45 +133,44 @@ public class CustomGridViewAdapter extends BaseAdapter implements Filterable {
 
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
-            listProgram=(ArrayList<Program>)results.values;
+            listProgram = (ArrayList<Program>) results.values;
             notifyDataSetChanged();
 
         }
     }
 
-    private class ProgramHolder{
+    private class ProgramHolder {
         private TextView title;
         private View view;
         private TextView timeStarting;
         private TextView timeEnding;
 
 
-        private ProgramHolder(View view){
-            this.title= (TextView) view.findViewById(R.id.titleProgram);
+        private ProgramHolder(View view) {
+            this.title = (TextView) view.findViewById(R.id.titleProgram);
             this.view = (View) view.findViewById(R.id.bgProgram);
-            this.timeStarting=(TextView) view.findViewById(R.id.timeStart);
+            this.timeStarting = (TextView) view.findViewById(R.id.timeStart);
             this.timeEnding = (TextView) view.findViewById(R.id.timeEnd);
 
 
         }
 
-        void build(final String title, final int color, Date timeStarting, Date timeEnding){
+        void build(final String title, final int color, Date timeStarting, Date timeEnding) {
             this.title.setText(title);
             this.view.setBackgroundColor(color);
 
             //set format Starting time
             SimpleDateFormat startTimeFormat = new SimpleDateFormat("EE HH:mm");
-            String datetimeStartingTime=startTimeFormat.format(timeStarting);
+            String datetimeStartingTime = startTimeFormat.format(timeStarting);
             //set format Ending time
             SimpleDateFormat endTimeFormat = new SimpleDateFormat("HH:mm");
-            String datetimeEndingTime=endTimeFormat.format(timeEnding);
+            String datetimeEndingTime = endTimeFormat.format(timeEnding);
 
             this.timeStarting.setText(datetimeStartingTime);
             this.timeEnding.setText(datetimeEndingTime);
 
         }
     }
-
 
 
 }
