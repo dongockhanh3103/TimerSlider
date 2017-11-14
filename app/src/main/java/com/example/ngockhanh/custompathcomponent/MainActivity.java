@@ -85,9 +85,6 @@ public class MainActivity extends AppCompatActivity {
 
         };
 
-
-
-
     }
 
     void init() {
@@ -98,11 +95,11 @@ public class MainActivity extends AppCompatActivity {
     List<Date> getArrTimeStarting() {
 
         List<Date> listTimeStarting = new ArrayList<Date>();
+        Log.d("aaa", "getArrTimeStarting: "+list.size());
         for(int i=0; i<list.size();i++){
+
             listTimeStarting.add(list.get(i).getTimeStarting());
-
         }
-
         return listTimeStarting;
     }
 
@@ -112,27 +109,10 @@ public class MainActivity extends AppCompatActivity {
         List<Date> listTimeEnding = new ArrayList<Date>();
         for(int i=0; i<list.size();i++){
             listTimeEnding.add(list.get(i).getTimeEnding());
-
         }
-
         return listTimeEnding;
     }
 
-    public String loadJSONFromAsset() {
-        String json = null;
-        try {
-            InputStream is = this.getAssets().open("content_page.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            json = new String(buffer, "UTF-8");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-        return json;
-    }
 
     public void loadProgram() {
         Resources res = getResources();
@@ -142,65 +122,47 @@ public class MainActivity extends AppCompatActivity {
 
         int i=0;
         while (scanner.hasNextLine()) {
-
-
             builder.append(scanner.nextLine());
-
           parseJson(builder.toString());
         }
     }
 
     private List<Program> parseJson(String json) {
-
-
         List<Program> programList = new ArrayList<Program>();
         StringBuilder builder = new StringBuilder();
         try {
             JSONObject root = new JSONObject(json);
             JSONArray datas = root.getJSONArray("datas");
+            Log.d("count", "parseJson: "+datas.length());
+            for (int i = 0; i < datas.length(); i++)
+            {
+                JSONObject data = datas.getJSONObject(i);
+                JSONArray items = data.getJSONArray("items");
 
+                for (int j = 0; j < items.length(); j++) {
 
-            for (int i = 0; i < datas.length(); i++) {
-                JSONObject object = datas.getJSONObject(i);
-
-
-                JSONArray items = object.getJSONArray("items");
-                for (int j = 0; j < items.length(); i++) {
-                    JSONObject item = items.getJSONObject(i);
-
-
+                    JSONObject item = items.getJSONObject(j);
                     String title = item.getString("title");
                     String image = item.getString("image");
                     String imgChannel=item.getString("channel_image");
                     JSONObject current_show_slot = item.getJSONObject("current_show_slot");
                     String stimeStarting = current_show_slot.getString("from");
                     String stimeEnding = current_show_slot.getString("to");
-
-
                     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
-
                     try {
                         Date timeStarting = sdf.parse(stimeStarting);
                         Date timeEnding=sdf.parse(stimeEnding);
                         Program program= new Program(title,image,imgChannel,timeStarting,timeEnding);
                         list.add(program);
-
                         programList.add(program);
 
                     } catch (ParseException ex) {
-
                     }
-
                 }
-
-
             }
-
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
         return programList;
     }
 
