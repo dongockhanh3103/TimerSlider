@@ -1,0 +1,1444 @@
+ {
+  "datas": [
+    {
+      "timedisplay": "2017-09-15T20:30:00Z",
+      "items": [
+        {
+          "id": "01ORANGE",
+          "image": "http://192.168.10.172/epg/Orange/RouteduRuhmPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Orange/Orange_logo_transparent.png",
+          "title": "Road Of Rhum",
+          "subtitle": "Sports",
+          "starttime": "20:00",
+          "endtime": "20:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T20:45:00Z"
+          }
+        },
+        {
+          "id": "02UTVSTARS",
+          "image": "http://192.168.10.172/epg/Cinemax/PearlHarborPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/UTVStars/UTVStars_logo_transparent.png",
+          "title": "Pearl Harbor",
+          "subtitle": "Movie",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "id": "03FRANCE24",
+          "image": "http://192.168.10.172/epg/CNBC/USClosingBellPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/France24/France24_logo_transparent.png",
+          "title": "US Closing Bell",
+          "subtitle": "News",
+          "starttime": "20:00",
+          "endtime": "20:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T20:45:00Z"
+          }
+        },
+        {
+          "id": "04MUSICINDIA",
+          "image": "http://192.168.10.172/epg/JayaTV/ThottiJayaPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/MusicIndia/MusicIndia_logo_transparent.png",
+          "title": "Thotti Jaya",
+          "subtitle": "Music",
+          "starttime": "20:00",
+          "endtime": "20:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T20:45:00Z"
+          }
+        },
+        {
+          "id": "05FOXFAMILY",
+          "image": "http://192.168.10.172/epg/FoxFamilyMovies/AddamsFamilyValuesPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/FoxFamilyMovies/FoxFamilyMovies_logo.transparent.png",
+          "title": "Addams Family",
+          "subtitle": "Serie",
+          "starttime": "20:00",
+          "endtime": "20:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T20:45:00Z"
+          }
+        },
+        {
+          "id": "06DISNEY",
+          "image": "http://192.168.10.172/epg/DisneyJunior/PJMasksPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyChannel/DisneyChannel_logo_transparent.png",
+          "title": "PJ Masks",
+          "subtitle": "Animation",
+          "starttime": "20:00",
+          "endtime": "20:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T20:45:00Z"
+          }
+        },
+        {
+          "id": "07DISNEYXD",
+          "image": "http://192.168.10.172/tvod/Movies/BigBugBunny/BigBugBunnyPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyXD/DisneyXD_logo_transparent.png",
+          "title": "Big Bug Bunny",
+          "subtitle": "Animation",
+          "starttime": "20:00",
+          "endtime": "20:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T20:45:00Z"
+          }
+        },
+        {
+          "id": "08NICK",
+          "image": "http://192.168.10.172/tvod/Movies/SitaSingsTheBlues/SitaSingsTheBluesPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Nickelodeon/Nickelodeon_logo_transparent.png",
+          "title": "SitaSingsTheBlues",
+          "subtitle": "Animation",
+          "starttime": "20:00",
+          "endtime": "20:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T20:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNN/TheWorldRightNowwithHalaGoraniPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "The World Right Now with Hala Goran",
+          "content_type": "channel",
+          "content_id": "CNN",
+          "subtitle": "Movie",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryChannel/DeadliestCatchPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Discovery/Discovery_logo_transparent.png",
+          "title": "Deadliest Catch",
+          "content_type": "channel",
+          "content_id": "Discovery",
+          "subtitle": "Documentary",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryAsia/UntamedChinaWithNigelMarvenPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DiscoveryAsia/DiscoveryAsia_logo_transparent.png",
+          "title": "Deadliest Catch",
+          "content_type": "channel",
+          "content_id": "Discovery Asia",
+          "subtitle": "Documentary",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/NationalGeographic/AirCrashInvestigationPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/NationalGeographic/NationalGeographic_logo_transparent.png",
+          "title": "Air Crash Investigation",
+          "content_type": "channel",
+          "content_id": "National Geographic",
+          "subtitle": "Documentary",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/svod/Movies/MoulinRouge/MoulinRougePosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyJunior/DisneyJunior_logo_transparent.png",
+          "title": "PJ Masks",
+          "content_type": "channel",
+          "content_id": "Disney Junior",
+          "subtitle": "Animation",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyXD/StarWarsRebelsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyXD/DisneyXD_logo_transparent.png",
+          "title": "Star Wars Rebels",
+          "content_type": "channel",
+          "content_id": "DisneyXD",
+          "subtitle": "Animation",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Eurosport/AthleticsWorldChampionshipsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Eurosport/Eurosport_logo_transparent.png",
+          "title": "Athletics World Championships",
+          "content_type": "channel",
+          "content_id": "Eurosport",
+          "subtitle": "Sports",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/svod/Movies/Avatar/AvatarPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "Pearl Harbor",
+          "content_type": "channel",
+          "content_id": "Cinemax",
+          "subtitle": "Movie",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/svod/Movies/Brave/BravePosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/CNBC/CNBC_logo_transparent.png",
+          "title": "US Closing Bell",
+          "content_type": "channel",
+          "content_id": "CNBC",
+          "subtitle": "News",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/svod/Movies/StarWarsTheForceAwakens/StarWarsTheForceAwakensPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "The World Right Now with Hala Goran",
+          "content_type": "channel",
+          "content_id": "CNN",
+          "subtitle": "Movie",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/svod/Movies/Titanic/TitanicPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Discovery/Discovery_logo_transparent.png",
+          "title": "Deadliest Catch",
+          "content_type": "channel",
+          "content_id": "Discovery",
+          "subtitle": "Documentary",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryAsia/UntamedChinaWithNigelMarvenPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DiscoveryAsia/DiscoveryAsia_logo_transparent.png",
+          "title": "Deadliest Catch",
+          "content_type": "channel",
+          "content_id": "Discovery Asia",
+          "subtitle": "Documentary",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/NationalGeographic/AirCrashInvestigationPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/NationalGeographic/NationalGeographic_logo_transparent.png",
+          "title": "Air Crash Investigation",
+          "content_type": "channel",
+          "content_id": "National Geographic",
+          "subtitle": "Documentary",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyJunior/PJMasksPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyJunior/DisneyJunior_logo_transparent.png",
+          "title": "PJ Masks",
+          "content_type": "channel",
+          "content_id": "Disney Junior",
+          "subtitle": "Animation",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyXD/StarWarsRebelsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyXD/DisneyXD_logo_transparent.png",
+          "title": "Star Wars Rebels",
+          "content_type": "channel",
+          "content_id": "DisneyXD",
+          "subtitle": "Animation",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Eurosport/AthleticsWorldChampionshipsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Eurosport/Eurosport_logo_transparent.png",
+          "title": "Athletics World Championships",
+          "content_type": "channel",
+          "content_id": "Eurosport",
+          "subtitle": "Sports",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Cinemax/PearlHarborPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "Pearl Harbor",
+          "content_type": "channel",
+          "content_id": "Cinemax",
+          "subtitle": "Movie",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "timedisplay": "2017-09-15T21:30:00Z",
+      "items": [
+        {
+          "image": "http://192.168.10.172/epg/Cinemax/PearlHarborPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "Pearl Harbor",
+          "content_type": "channel",
+          "content_id": "Cinemax",
+          "subtitle": "Movie",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNBC/NBCNightlyNewsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/CNBC/CNBC_logo_transparent.png",
+          "title": "Maggie's Magic Menu",
+          "content_type": "channel",
+          "content_id": "CNBC",
+          "subtitle": "News",
+          "starttime": "21:00",
+          "endtime": "22:30",
+          "current_show_slot": {
+            "from": "2017-09-15T21:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNN/WorldSportPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "World Sport",
+          "content_type": "channel",
+          "content_id": "CNN",
+          "subtitle": "News",
+          "starttime": "21:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T21:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryChannel/ExtremeCarHoardersPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Discovery/Discovery_logo_transparent.png",
+          "title": "Extreme Car Hoarders",
+          "content_type": "channel",
+          "content_id": "Discovery",
+          "subtitle": "Documentary",
+          "starttime": "20:45",
+          "endtime": "22:00",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryAsia/UntamedChinaWithNigelMarvenPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DiscoveryAsia/DiscoveryAsia_logo_transparent.png",
+          "title": "Deadliest Catch",
+          "content_type": "channel",
+          "content_id": "Discovery Asia",
+          "subtitle": "Documentary",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/NationalGeographic/AirCrashInvestigationPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/NationalGeographic/NationalGeographic_logo_transparent.png",
+          "title": "Air Crash Investigation",
+          "content_type": "channel",
+          "content_id": "National Geographic",
+          "subtitle": "Documentary",
+          "starttime": "20:00",
+          "endtime": "22:00",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyJunior/PJMasksPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyJunior/DisneyJunior_logo_transparent.png",
+          "title": "PJ Masks",
+          "content_type": "channel",
+          "content_id": "Disney Junior",
+          "subtitle": "Animation",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyXD/StarWarsRebelsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyXD/DisneyXD_logo_transparent.png",
+          "title": "Star Wars Rebels",
+          "content_type": "channel",
+          "content_id": "DisneyXD",
+          "subtitle": "Animation",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Eurosport/BinckBankTourPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Eurosport/Eurosport_logo_transparent.png",
+          "title": "Binck Bank Tour",
+          "content_type": "channel",
+          "content_id": "Eurosport",
+          "subtitle": "Sports",
+          "starttime": "21:20",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Cinemax/PearlHarborPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "Pearl Harbor",
+          "content_type": "channel",
+          "content_id": "Cinemax",
+          "subtitle": "Movie",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNBC/NBCNightlyNewsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/CNBC/CNBC_logo_transparent.png",
+          "title": "Maggie's Magic Menu",
+          "content_type": "channel",
+          "content_id": "CNBC",
+          "subtitle": "News",
+          "starttime": "21:00",
+          "endtime": "22:30",
+          "current_show_slot": {
+            "from": "2017-09-15T21:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNN/WorldSportPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "World Sport",
+          "content_type": "channel",
+          "content_id": "CNN",
+          "subtitle": "News",
+          "starttime": "21:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T21:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryChannel/ExtremeCarHoardersPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Discovery/Discovery_logo_transparent.png",
+          "title": "Extreme Car Hoarders",
+          "content_type": "channel",
+          "content_id": "Discovery",
+          "subtitle": "Documentary",
+          "starttime": "20:45",
+          "endtime": "22:00",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryAsia/UntamedChinaWithNigelMarvenPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DiscoveryAsia/DiscoveryAsia_logo_transparent.png",
+          "title": "Deadliest Catch",
+          "content_type": "channel",
+          "content_id": "Discovery Asia",
+          "subtitle": "Documentary",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/NationalGeographic/AirCrashInvestigationPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/NationalGeographic/NationalGeographic_logo_transparent.png",
+          "title": "Air Crash Investigation",
+          "content_type": "channel",
+          "content_id": "National Geographic",
+          "subtitle": "Documentary",
+          "starttime": "20:00",
+          "endtime": "22:00",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyJunior/PJMasksPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyJunior/DisneyJunior_logo_transparent.png",
+          "title": "PJ Masks",
+          "content_type": "channel",
+          "content_id": "Disney Junior",
+          "subtitle": "Animation",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyXD/StarWarsRebelsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyXD/DisneyXD_logo_transparent.png",
+          "title": "Star Wars Rebels",
+          "content_type": "channel",
+          "content_id": "DisneyXD",
+          "subtitle": "Animation",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Eurosport/BinckBankTourPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Eurosport/Eurosport_logo_transparent.png",
+          "title": "Binck Bank Tour",
+          "content_type": "channel",
+          "content_id": "Eurosport",
+          "subtitle": "Sports",
+          "starttime": "21:20",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Cinemax/PearlHarborPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "Pearl Harbor",
+          "content_type": "channel",
+          "content_id": "Cinemax",
+          "subtitle": "Movie",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNBC/NBCNightlyNewsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/CNBC/CNBC_logo_transparent.png",
+          "title": "Maggie's Magic Menu",
+          "content_type": "channel",
+          "content_id": "CNBC",
+          "subtitle": "News",
+          "starttime": "21:00",
+          "endtime": "22:30",
+          "current_show_slot": {
+            "from": "2017-09-15T21:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNN/WorldSportPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "World Sport",
+          "content_type": "channel",
+          "content_id": "CNN",
+          "subtitle": "News",
+          "starttime": "21:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T21:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryChannel/ExtremeCarHoardersPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Discovery/Discovery_logo_transparent.png",
+          "title": "Extreme Car Hoarders",
+          "content_type": "channel",
+          "content_id": "Discovery",
+          "subtitle": "Documentary",
+          "starttime": "20:45",
+          "endtime": "22:00",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryAsia/UntamedChinaWithNigelMarvenPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DiscoveryAsia/DiscoveryAsia_logo_transparent.png",
+          "title": "Deadliest Catch",
+          "content_type": "channel",
+          "content_id": "Discovery Asia",
+          "subtitle": "Documentary",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/NationalGeographic/AirCrashInvestigationPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/NationalGeographic/NationalGeographic_logo_transparent.png",
+          "title": "Air Crash Investigation",
+          "content_type": "channel",
+          "content_id": "National Geographic",
+          "subtitle": "Documentary",
+          "starttime": "20:00",
+          "endtime": "22:00",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyJunior/PJMasksPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyJunior/DisneyJunior_logo_transparent.png",
+          "title": "PJ Masks",
+          "content_type": "channel",
+          "content_id": "Disney Junior",
+          "subtitle": "Animation",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyXD/StarWarsRebelsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyXD/DisneyXD_logo_transparent.png",
+          "title": "Star Wars Rebels",
+          "content_type": "channel",
+          "content_id": "DisneyXD",
+          "subtitle": "Animation",
+          "starttime": "20:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Eurosport/BinckBankTourPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Eurosport/Eurosport_logo_transparent.png",
+          "title": "Binck Bank Tour",
+          "content_type": "channel",
+          "content_id": "Eurosport",
+          "subtitle": "Sports",
+          "starttime": "21:20",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "timedisplay": "2017-09-15T22:30:00Z",
+      "items": [
+        {
+          "image": "http://192.168.10.172/epg/Cinemax/DaylightPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "Daylight",
+          "content_type": "channel",
+          "content_id": "Cinemax",
+          "subtitle": "Movie",
+          "starttime": "22:30",
+          "endtime": "23:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNBC/MarketingMediaMoneyPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/CNBC/CNBC_logo_transparent.png",
+          "title": "Marketing Media Money",
+          "content_type": "channel",
+          "content_id": "CNBC",
+          "subtitle": "News",
+          "starttime": "21:00",
+          "endtime": "22:30",
+          "current_show_slot": {
+            "from": "2017-09-15T21:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNN/WorldSportPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "World Sport",
+          "content_type": "channel",
+          "content_id": "CNN",
+          "subtitle": "News",
+          "starttime": "21:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T21:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryChannel/ExtremeCarHoardersPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Discovery/Discovery_logo_transparent.png",
+          "title": "Extreme Car Hoarders",
+          "content_type": "channel",
+          "content_id": "Discovery",
+          "subtitle": "Documentary",
+          "starttime": "20:45",
+          "endtime": "22:00",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryAsia/MaggiesMagicMenuPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DiscoveryAsia/DiscoveryAsia_logo_transparent.png",
+          "title": "Maggies Magic Menu",
+          "content_type": "channel",
+          "content_id": "Discovery Asia",
+          "subtitle": "Show",
+          "starttime": "22:30",
+          "endtime": "23:15",
+          "current_show_slot": {
+            "from": "2017-09-15T22:30:00Z",
+            "to": "2017-09-15T23:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/NationalGeographic/BorderWarsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/NationalGeographic/NationalGeographic_logo_transparent.png",
+          "title": "Border Wars",
+          "content_type": "channel",
+          "content_id": "National Geographic",
+          "subtitle": "Documentary",
+          "starttime": "22:30",
+          "endtime": "23:30",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyJunior/SofiatheFirstPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyJunior/DisneyJunior_logo_transparent.png",
+          "title": "Sofia the First",
+          "content_type": "channel",
+          "content_id": "Disney Junior",
+          "subtitle": "Animation",
+          "starttime": "22:30",
+          "endtime": "23:15",
+          "current_show_slot": {
+            "from": "2017-09-15T22:30:00Z",
+            "to": "2017-09-15T23:15:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyXD/MarvelsAvengersPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyXD/DisneyXD_logo_transparent.png",
+          "title": "Marvels Avengers",
+          "content_type": "channel",
+          "content_id": "DisneyXD",
+          "subtitle": "Animation",
+          "starttime": "22:15",
+          "endtime": "23:15",
+          "current_show_slot": {
+            "from": "2017-09-15T22:15:00Z",
+            "to": "2017-09-15T23:15:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Eurosport/EuropeanRallyChampionshipPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Eurosport/Eurosport_logo_transparent.png",
+          "title": "European Rally Championship",
+          "content_type": "channel",
+          "content_id": "Eurosport",
+          "subtitle": "Sports",
+          "starttime": "22:20",
+          "endtime": "23:20",
+          "current_show_slot": {
+            "from": "2017-09-15T22:20:00Z",
+            "to": "2017-09-15T23:20:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Cinemax/DaylightPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "Daylight",
+          "content_type": "channel",
+          "content_id": "Cinemax",
+          "subtitle": "Movie",
+          "starttime": "22:30",
+          "endtime": "23:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNBC/MarketingMediaMoneyPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/CNBC/CNBC_logo_transparent.png",
+          "title": "Marketing Media Money",
+          "content_type": "channel",
+          "content_id": "CNBC",
+          "subtitle": "News",
+          "starttime": "21:00",
+          "endtime": "22:30",
+          "current_show_slot": {
+            "from": "2017-09-15T21:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNN/WorldSportPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "World Sport",
+          "content_type": "channel",
+          "content_id": "CNN",
+          "subtitle": "News",
+          "starttime": "21:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T21:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryChannel/ExtremeCarHoardersPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Discovery/Discovery_logo_transparent.png",
+          "title": "Extreme Car Hoarders",
+          "content_type": "channel",
+          "content_id": "Discovery",
+          "subtitle": "Documentary",
+          "starttime": "20:45",
+          "endtime": "22:00",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryAsia/MaggiesMagicMenuPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DiscoveryAsia/DiscoveryAsia_logo_transparent.png",
+          "title": "Maggies Magic Menu",
+          "content_type": "channel",
+          "content_id": "Discovery Asia",
+          "subtitle": "Show",
+          "starttime": "22:30",
+          "endtime": "23:15",
+          "current_show_slot": {
+            "from": "2017-09-15T22:30:00Z",
+            "to": "2017-09-15T23:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/NationalGeographic/BorderWarsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/NationalGeographic/NationalGeographic_logo_transparent.png",
+          "title": "Border Wars",
+          "content_type": "channel",
+          "content_id": "National Geographic",
+          "subtitle": "Documentary",
+          "starttime": "22:30",
+          "endtime": "23:30",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyJunior/SofiatheFirstPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyJunior/DisneyJunior_logo_transparent.png",
+          "title": "Sofia the First",
+          "content_type": "channel",
+          "content_id": "Disney Junior",
+          "subtitle": "Animation",
+          "starttime": "22:30",
+          "endtime": "23:15",
+          "current_show_slot": {
+            "from": "2017-09-15T22:30:00Z",
+            "to": "2017-09-15T23:15:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyXD/MarvelsAvengersPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyXD/DisneyXD_logo_transparent.png",
+          "title": "Marvels Avengers",
+          "content_type": "channel",
+          "content_id": "DisneyXD",
+          "subtitle": "Animation",
+          "starttime": "22:15",
+          "endtime": "23:15",
+          "current_show_slot": {
+            "from": "2017-09-15T22:15:00Z",
+            "to": "2017-09-15T23:15:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Eurosport/EuropeanRallyChampionshipPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Eurosport/Eurosport_logo_transparent.png",
+          "title": "European Rally Championship",
+          "content_type": "channel",
+          "content_id": "Eurosport",
+          "subtitle": "Sports",
+          "starttime": "22:20",
+          "endtime": "23:20",
+          "current_show_slot": {
+            "from": "2017-09-15T22:20:00Z",
+            "to": "2017-09-15T23:20:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Cinemax/DaylightPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "Daylight",
+          "content_type": "channel",
+          "content_id": "Cinemax",
+          "subtitle": "Movie",
+          "starttime": "22:30",
+          "endtime": "23:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNBC/MarketingMediaMoneyPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/CNBC/CNBC_logo_transparent.png",
+          "title": "Marketing Media Money",
+          "content_type": "channel",
+          "content_id": "CNBC",
+          "subtitle": "News",
+          "starttime": "21:00",
+          "endtime": "22:30",
+          "current_show_slot": {
+            "from": "2017-09-15T21:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNN/WorldSportPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "World Sport",
+          "content_type": "channel",
+          "content_id": "CNN",
+          "subtitle": "News",
+          "starttime": "21:00",
+          "endtime": "22:45",
+          "current_show_slot": {
+            "from": "2017-09-15T21:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryChannel/ExtremeCarHoardersPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Discovery/Discovery_logo_transparent.png",
+          "title": "Extreme Car Hoarders",
+          "content_type": "channel",
+          "content_id": "Discovery",
+          "subtitle": "Documentary",
+          "starttime": "20:45",
+          "endtime": "22:00",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryAsia/MaggiesMagicMenuPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DiscoveryAsia/DiscoveryAsia_logo_transparent.png",
+          "title": "Maggies Magic Menu",
+          "content_type": "channel",
+          "content_id": "Discovery Asia",
+          "subtitle": "Show",
+          "starttime": "22:30",
+          "endtime": "23:15",
+          "current_show_slot": {
+            "from": "2017-09-15T22:30:00Z",
+            "to": "2017-09-15T23:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/NationalGeographic/BorderWarsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/NationalGeographic/NationalGeographic_logo_transparent.png",
+          "title": "Border Wars",
+          "content_type": "channel",
+          "content_id": "National Geographic",
+          "subtitle": "Documentary",
+          "starttime": "22:30",
+          "endtime": "23:30",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyJunior/SofiatheFirstPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyJunior/DisneyJunior_logo_transparent.png",
+          "title": "Sofia the First",
+          "content_type": "channel",
+          "content_id": "Disney Junior",
+          "subtitle": "Animation",
+          "starttime": "22:30",
+          "endtime": "23:15",
+          "current_show_slot": {
+            "from": "2017-09-15T22:30:00Z",
+            "to": "2017-09-15T23:15:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyXD/MarvelsAvengersPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyXD/DisneyXD_logo_transparent.png",
+          "title": "Marvels Avengers",
+          "content_type": "channel",
+          "content_id": "DisneyXD",
+          "subtitle": "Animation",
+          "starttime": "22:15",
+          "endtime": "23:15",
+          "current_show_slot": {
+            "from": "2017-09-15T22:15:00Z",
+            "to": "2017-09-15T23:15:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Eurosport/EuropeanRallyChampionshipPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Eurosport/Eurosport_logo_transparent.png",
+          "title": "European Rally Championship",
+          "content_type": "channel",
+          "content_id": "Eurosport",
+          "subtitle": "Sports",
+          "starttime": "22:20",
+          "endtime": "23:20",
+          "current_show_slot": {
+            "from": "2017-09-15T22:20:00Z",
+            "to": "2017-09-15T23:20:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "timedisplay": "2017-09-15T23:30:00Z",
+      "items": [
+        {
+          "image": "http://192.168.10.172/epg/Cinemax/DaylightPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "Daylight",
+          "content_type": "channel",
+          "content_id": "Cinemax",
+          "subtitle": "Movie",
+          "starttime": "22:30",
+          "endtime": "23:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNBC/LateNightwithSethMeyersPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/CNBC/CNBC_logo_transparent.png",
+          "title": "Style Inc. With Aalim Hakim",
+          "content_type": "channel",
+          "content_id": "CNBC",
+          "subtitle": "News",
+          "starttime": "23:15",
+          "endtime": "00:30",
+          "current_show_slot": {
+            "from": "2017-09-15T23:15:00Z",
+            "to": "2017-09-16T00:30:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNN/CNNTodayPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "CNN Today",
+          "content_type": "channel",
+          "content_id": "CNN",
+          "subtitle": "News",
+          "starttime": "23:10",
+          "endtime": "00:00",
+          "current_show_slot": {
+            "from": "2017-09-15T23:10:00Z",
+            "to": "2017-09-16T00:00:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryChannel/YukonMenPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Discovery/Discovery_logo_transparent.png",
+          "title": "Yukon Men",
+          "content_type": "channel",
+          "content_id": "Discovery",
+          "subtitle": "Documentary",
+          "starttime": "23:15",
+          "endtime": "01:00",
+          "current_show_slot": {
+            "from": "2017-09-15T23:15:00Z",
+            "to": "2017-09-16T01:00:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryAsia/StyleIncWithAalimHakimsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DiscoveryAsia/DiscoveryAsia_logo_transparent.png",
+          "title": "Style Inc With Aalim Hakim",
+          "content_type": "channel",
+          "content_id": "Discovery Asia",
+          "subtitle": "Show",
+          "starttime": "23:30",
+          "endtime": "23:55",
+          "current_show_slot": {
+            "from": "2017-09-15T23:30:00Z",
+            "to": "2017-09-15T23:55:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/NationalGeographic/SecondsFromDisasterPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/NationalGeographic/NationalGeographic_logo_transparent.png",
+          "title": "Seconds From Disaster",
+          "content_type": "channel",
+          "content_id": "National Geographic",
+          "subtitle": "Documentary",
+          "starttime": "23:30",
+          "endtime": "23:55",
+          "current_show_slot": {
+            "from": "2017-09-15T23:30:00Z",
+            "to": "2017-09-15T23:55:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyJunior/HenryHugglemonsterPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyJunior/DisneyJunior_logo_transparent.png",
+          "title": "Henry Huggle monster",
+          "content_type": "channel",
+          "content_id": "Disney Junior",
+          "subtitle": "Animation",
+          "starttime": "23:30",
+          "endtime": "23:55",
+          "current_show_slot": {
+            "from": "2017-09-15T23:30:00Z",
+            "to": "2017-09-15T23:55:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyXD/PhineasandFerbPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyXD/DisneyXD_logo_transparent.png",
+          "title": "Phineas and Ferb",
+          "content_type": "channel",
+          "content_id": "DisneyXD",
+          "subtitle": "Animation",
+          "starttime": "23:30",
+          "endtime": "23:55",
+          "current_show_slot": {
+            "from": "2017-09-15T23:30:00Z",
+            "to": "2017-09-15T23:55:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Eurosport/MotocrossBritishChampsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Eurosport/Eurosport_logo_transparent.png",
+          "title": "Motocross British Champs",
+          "content_type": "channel",
+          "content_id": "Eurosport",
+          "subtitle": "Sports",
+          "starttime": "23:30",
+          "endtime": "23:55",
+          "current_show_slot": {
+            "from": "2017-09-15T23:30:00Z",
+            "to": "2017-09-15T23:55:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Cinemax/DaylightPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "Daylight",
+          "content_type": "channel",
+          "content_id": "Cinemax",
+          "subtitle": "Movie",
+          "starttime": "22:30",
+          "endtime": "23:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNBC/LateNightwithSethMeyersPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/CNBC/CNBC_logo_transparent.png",
+          "title": "Style Inc. With Aalim Hakim",
+          "content_type": "channel",
+          "content_id": "CNBC",
+          "subtitle": "News",
+          "starttime": "23:15",
+          "endtime": "00:30",
+          "current_show_slot": {
+            "from": "2017-09-15T23:15:00Z",
+            "to": "2017-09-16T00:30:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNN/CNNTodayPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "CNN Today",
+          "content_type": "channel",
+          "content_id": "CNN",
+          "subtitle": "News",
+          "starttime": "23:10",
+          "endtime": "00:00",
+          "current_show_slot": {
+            "from": "2017-09-15T23:10:00Z",
+            "to": "2017-09-16T00:00:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryChannel/YukonMenPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Discovery/Discovery_logo_transparent.png",
+          "title": "Yukon Men",
+          "content_type": "channel",
+          "content_id": "Discovery",
+          "subtitle": "Documentary",
+          "starttime": "23:15",
+          "endtime": "01:00",
+          "current_show_slot": {
+            "from": "2017-09-15T23:15:00Z",
+            "to": "2017-09-16T01:00:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryAsia/StyleIncWithAalimHakimsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DiscoveryAsia/DiscoveryAsia_logo_transparent.png",
+          "title": "Style Inc With Aalim Hakim",
+          "content_type": "channel",
+          "content_id": "Discovery Asia",
+          "subtitle": "Show",
+          "starttime": "23:30",
+          "endtime": "23:55",
+          "current_show_slot": {
+            "from": "2017-09-15T23:30:00Z",
+            "to": "2017-09-15T23:55:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/NationalGeographic/SecondsFromDisasterPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/NationalGeographic/NationalGeographic_logo_transparent.png",
+          "title": "Seconds From Disaster",
+          "content_type": "channel",
+          "content_id": "National Geographic",
+          "subtitle": "Documentary",
+          "starttime": "23:30",
+          "endtime": "23:55",
+          "current_show_slot": {
+            "from": "2017-09-15T23:30:00Z",
+            "to": "2017-09-15T23:55:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyJunior/HenryHugglemonsterPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyJunior/DisneyJunior_logo_transparent.png",
+          "title": "Henry Huggle monster",
+          "content_type": "channel",
+          "content_id": "Disney Junior",
+          "subtitle": "Animation",
+          "starttime": "23:30",
+          "endtime": "23:55",
+          "current_show_slot": {
+            "from": "2017-09-15T23:30:00Z",
+            "to": "2017-09-15T23:55:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DisneyXD/PhineasandFerbPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DisneyXD/DisneyXD_logo_transparent.png",
+          "title": "Phineas and Ferb",
+          "content_type": "channel",
+          "content_id": "DisneyXD",
+          "subtitle": "Animation",
+          "starttime": "23:30",
+          "endtime": "23:55",
+          "current_show_slot": {
+            "from": "2017-09-15T23:30:00Z",
+            "to": "2017-09-15T23:55:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Eurosport/MotocrossBritishChampsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Eurosport/Eurosport_logo_transparent.png",
+          "title": "Motocross British Champs",
+          "content_type": "channel",
+          "content_id": "Eurosport",
+          "subtitle": "Sports",
+          "starttime": "23:30",
+          "endtime": "23:55",
+          "current_show_slot": {
+            "from": "2017-09-15T23:30:00Z",
+            "to": "2017-09-15T23:55:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/Cinemax/DaylightPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "Daylight",
+          "content_type": "channel",
+          "content_id": "Cinemax",
+          "subtitle": "Movie",
+          "starttime": "22:30",
+          "endtime": "23:45",
+          "current_show_slot": {
+            "from": "2017-09-15T20:00:00Z",
+            "to": "2017-09-15T22:45:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNBC/LateNightwithSethMeyersPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/CNBC/CNBC_logo_transparent.png",
+          "title": "Style Inc. With Aalim Hakim",
+          "content_type": "channel",
+          "content_id": "CNBC",
+          "subtitle": "News",
+          "starttime": "23:15",
+          "endtime": "00:30",
+          "current_show_slot": {
+            "from": "2017-09-15T23:15:00Z",
+            "to": "2017-09-16T00:30:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/CNN/CNNTodayPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Cinemax/Cinemax_logo_transparent.png",
+          "title": "CNN Today",
+          "content_type": "channel",
+          "content_id": "CNN",
+          "subtitle": "News",
+          "starttime": "23:10",
+          "endtime": "00:00",
+          "current_show_slot": {
+            "from": "2017-09-15T23:10:00Z",
+            "to": "2017-09-16T00:00:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryChannel/YukonMenPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/Discovery/Discovery_logo_transparent.png",
+          "title": "Yukon Men",
+          "content_type": "channel",
+          "content_id": "Discovery",
+          "subtitle": "Documentary",
+          "starttime": "23:15",
+          "endtime": "01:00",
+          "current_show_slot": {
+            "from": "2017-09-15T23:15:00Z",
+            "to": "2017-09-16T01:00:00Z"
+          }
+        },
+        {
+          "image": "http://192.168.10.172/epg/DiscoveryAsia/StyleIncWithAalimHakimsPosterSquare.jpg",
+          "channel_image": "http://192.168.10.172/channellist/DiscoveryAsia/DiscoveryAsia_logo_transparent.png",
+          "title": "Style Inc With Aalim Hakim",
+          "content_type": "channel",
+          "content_id": "Discovery Asia",
+          "subtitle": "Show",
+          "starttime": "23:30",
+          "endtime": "23:55",
+          "current_show_slot": {
+            "from": "2017-09-15T23:30:00Z",
+            "to": "2017-09-15T23:55:00Z"
+          }
+        }
+      ]
+    }
+  ]
+}}

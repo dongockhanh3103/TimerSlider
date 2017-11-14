@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Build;
+import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +24,13 @@ import com.example.ngockhanh.custompathcomponent.Components.SliderTimer;
 import com.example.ngockhanh.custompathcomponent.Listener.ChangeChanel;
 import com.example.ngockhanh.custompathcomponent.Models.Program;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -30,16 +38,14 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
     GridView gridView;
-    int[] colors = {Color.BLACK, Color.RED, Color.BLUE, Color.YELLOW, Color.GRAY, Color.GREEN, Color.WHITE, Color.BLACK, Color.RED, Color.BLUE, Color.YELLOW, Color.GRAY, Color.GREEN, Color.WHITE};
-    String[] titles = {"BLACK", "RED", "BLUE", "YELLOW", "GRAY", "GREEN", "WHITE", "BLACK", "RED", "BLUE", "YELLOW", "GRAY", "GREEN", "WHITE"};
     List<Date> timeStarting;
-
     List<Date> timeEnding;
     SliderTimer sliderTimer;
-
+    List<Program> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,24 +55,23 @@ public class MainActivity extends AppCompatActivity {
 
         init();
         final List<Program> programList = new ArrayList<Program>();
+        list=new ArrayList<Program>();
+
+        loadProgram();
 
         //get Starting time
         timeStarting = getArrTimeStarting();
         //get Ending time
         timeEnding = getArrTimeEnding();
 
-        for (int i = 0; i < colors.length; i++) {
-            Program program = new Program(titles[i], colors[i], timeStarting.get(i), timeEnding.get(i));
-            programList.add(program);
-        }
+
 
         Date maxDate = Collections.max(timeEnding);
         Date minDate = Collections.min(timeStarting);
 
-
         sliderTimer.setMaxTime(maxDate);
         sliderTimer.setMinTime(minDate);
-        final CustomGridViewAdapter customGridViewAdapter = new CustomGridViewAdapter(this, programList);
+        final CustomGridViewAdapter customGridViewAdapter = new CustomGridViewAdapter(this, list);
         gridView.setAdapter(customGridViewAdapter);
         customGridViewAdapter.notifyDataSetChanged();
 
@@ -80,6 +85,9 @@ public class MainActivity extends AppCompatActivity {
 
         };
 
+
+
+
     }
 
     void init() {
@@ -90,26 +98,9 @@ public class MainActivity extends AppCompatActivity {
     List<Date> getArrTimeStarting() {
 
         List<Date> listTimeStarting = new ArrayList<Date>();
+        for(int i=0; i<list.size();i++){
+            listTimeStarting.add(list.get(i).getTimeStarting());
 
-        //yyyyMMddHHmm
-        String[] arrStringDateTime =
-                {"201711110730", "201711110745", "201711110845",
-                "201711110900","201711110845", "201711110830", "201711111100",
-                "201711111130", "201711111130", "201711111330", "201711111430",
-                "201711111515", "201711111700", "201711111730"};
-
-
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmm");
-
-        for (int i = 0; i < arrStringDateTime.length; i++) {
-            try {
-                Date d = sdf.parse(arrStringDateTime[i]);
-                //  Log.d("Date", "getArrTimeStarting: "+d.toString());
-
-                listTimeStarting.add(d);
-
-            } catch (ParseException ex) {
-            }
         }
 
         return listTimeStarting;
@@ -119,25 +110,98 @@ public class MainActivity extends AppCompatActivity {
     List<Date> getArrTimeEnding() {
         //14
         List<Date> listTimeEnding = new ArrayList<Date>();
-        //yyyyMMddHHmm
-        String[] arrStringDateTime =
-                {"201711110830", "201711110830", "201711111000",
-                "201711111030", "201711111045", "201711111030", "201711111200",
-                "201711111400", "201711111330", "201711111415", "201711111500",
-                "201711111645", "201711111800", "201711111900"};
+        for(int i=0; i<list.size();i++){
+            listTimeEnding.add(list.get(i).getTimeEnding());
 
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmm");
+        }
 
-        for (int i = 0; i < arrStringDateTime.length; i++) {
-            try {
-                Date d = sdf.parse(arrStringDateTime[i]);
+        return listTimeEnding;
+    }
 
-                listTimeEnding.add(d);
-            } catch (ParseException ex) {
+    public String loadJSONFromAsset() {
+        String json = null;
+        try {
+            InputStream is = this.getAssets().open("content_page.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
+
+    public void loadProgram() {
+        Resources res = getResources();
+        InputStream is = res.openRawResource(R.raw.content_page);
+        Scanner scanner = new Scanner(is);
+        StringBuilder builder = new StringBuilder();
+
+        int i=0;
+        while (scanner.hasNextLine()) {
+
+
+            builder.append(scanner.nextLine());
+
+          parseJson(builder.toString());
+        }
+    }
+
+    private List<Program> parseJson(String json) {
+
+
+        List<Program> programList = new ArrayList<Program>();
+        StringBuilder builder = new StringBuilder();
+        try {
+            JSONObject root = new JSONObject(json);
+            JSONArray datas = root.getJSONArray("datas");
+
+
+            for (int i = 0; i < datas.length(); i++) {
+                JSONObject object = datas.getJSONObject(i);
+
+
+                JSONArray items = object.getJSONArray("items");
+                for (int j = 0; j < items.length(); i++) {
+                    JSONObject item = items.getJSONObject(i);
+
+
+                    String title = item.getString("title");
+                    String image = item.getString("image");
+                    String imgChannel=item.getString("channel_image");
+                    JSONObject current_show_slot = item.getJSONObject("current_show_slot");
+                    String stimeStarting = current_show_slot.getString("from");
+                    String stimeEnding = current_show_slot.getString("to");
+
+
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
+
+                    try {
+                        Date timeStarting = sdf.parse(stimeStarting);
+                        Date timeEnding=sdf.parse(stimeEnding);
+                        Program program= new Program(title,image,imgChannel,timeStarting,timeEnding);
+                        list.add(program);
+
+                        programList.add(program);
+
+                    } catch (ParseException ex) {
+
+                    }
+
+                }
+
 
             }
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
-        return listTimeEnding;
+
+        return programList;
     }
 
 

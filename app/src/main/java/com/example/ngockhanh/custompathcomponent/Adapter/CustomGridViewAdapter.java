@@ -8,10 +8,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ngockhanh.custompathcomponent.Models.Program;
 import com.example.ngockhanh.custompathcomponent.R;
+import com.squareup.picasso.Picasso;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -66,7 +68,8 @@ public class CustomGridViewAdapter extends BaseAdapter implements Filterable {
             programHolder = (ProgramHolder) convertView.getTag();
         }
 
-        programHolder.build(getItem(position).getTitle(), getItem(position).getColor(),
+        programHolder.build(getItem(position).getTitle(), getItem(position).getImage(),
+                getItem(position).getImgChannel(),
                 getItem(position).getTimeStarting(), getItem(position).getTimeEnding());
 
         return convertView;
@@ -105,7 +108,8 @@ public class CustomGridViewAdapter extends BaseAdapter implements Filterable {
                         if (((date.compareTo(startingTime)) == 1 && date.compareTo(endingTime) == -1)
                                 || date.compareTo(startingTime) == 0 || date.compareTo(endingTime) == 0) {
 
-                            Program program = new Program(filterList.get(i).getTitle(), filterList.get(i).getColor()
+                            Program program = new Program(filterList.get(i).getTitle(), filterList.get(i).getImage(),
+                                    filterList.get(i).getImgChannel()
                                     , filterList.get(i).getTimeStarting(), filterList.get(i).getTimeEnding());
                             filters.add(program);
                         }
@@ -142,22 +146,34 @@ public class CustomGridViewAdapter extends BaseAdapter implements Filterable {
     private class ProgramHolder {
         private TextView title;
         private View view;
+        private ImageView imageView;
         private TextView timeStarting;
         private TextView timeEnding;
+        private ImageView imgChannel;
 
 
         private ProgramHolder(View view) {
             this.title = (TextView) view.findViewById(R.id.titleProgram);
-            this.view = (View) view.findViewById(R.id.bgProgram);
+           // this.view = (View) view.findViewById(R.id.bgProgram);
+            this.imageView=(ImageView) view.findViewById(R.id.bgProgram);
             this.timeStarting = (TextView) view.findViewById(R.id.timeStart);
             this.timeEnding = (TextView) view.findViewById(R.id.timeEnd);
+            this.imgChannel=(ImageView) view.findViewById(R.id.imgChannel);
 
 
         }
 
-        void build(final String title, final int color, Date timeStarting, Date timeEnding) {
+        void build(final String title,  String image,String imgChannel, Date timeStarting, Date timeEnding) {
             this.title.setText(title);
-            this.view.setBackgroundColor(color);
+           // this.view.setBackgroundColor(color);
+           // imageView.setImageResource(color);
+            Picasso.with(context)
+                    .load(image)
+                    .into(this.imageView);
+            Picasso.with(context)
+                    .load(imgChannel)
+                    .into(this.imgChannel);
+
 
             //set format Starting time
             SimpleDateFormat startTimeFormat = new SimpleDateFormat("EE HH:mm");
@@ -168,6 +184,7 @@ public class CustomGridViewAdapter extends BaseAdapter implements Filterable {
 
             this.timeStarting.setText(datetimeStartingTime);
             this.timeEnding.setText(datetimeEndingTime);
+
 
         }
     }

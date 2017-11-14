@@ -11,14 +11,38 @@ public class Program {
     Date timeStarting;
     Date timeEnding;
     int color;
+    String image;
+    String imgChannel;
 
     public Program(){};
-    public Program(String title, int color, Date timeStarting,Date timeEnding){
+    public Program(String title, String image, String imgChannel,Date timeStarting,Date timeEnding){
         this.title=title;
-        this.color=color;
+        this.image=image;
+        this.imgChannel=imgChannel;
         this.timeStarting=timeStarting;
         this.timeEnding=timeEnding;
     };
+    public String getImgChannel() {
+        return imgChannel;
+    }
+
+    public void setImgChannel(String imgChannel) {
+        this.imgChannel = imgChannel;
+    }
+
+
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+
+
+
 
     public Date getTimeStarting() {
         return timeStarting;
