@@ -123,10 +123,6 @@ public class CustomGridViewAdapter extends BaseAdapter implements Filterable {
                     e.printStackTrace();
                 }
 
-
-                //Constrain to upper
-
-
             } else {
                 results.count = filterList.size();
                 results.values = filterList;
@@ -145,7 +141,6 @@ public class CustomGridViewAdapter extends BaseAdapter implements Filterable {
 
     private class ProgramHolder {
         private TextView title;
-        private View view;
         private ImageView imageView;
         private TextView timeStarting;
         private TextView timeEnding;
@@ -154,26 +149,22 @@ public class CustomGridViewAdapter extends BaseAdapter implements Filterable {
 
         private ProgramHolder(View view) {
             this.title = (TextView) view.findViewById(R.id.titleProgram);
-           // this.view = (View) view.findViewById(R.id.bgProgram);
-            this.imageView=(ImageView) view.findViewById(R.id.bgProgram);
+            this.imageView = (ImageView) view.findViewById(R.id.bgProgram);
             this.timeStarting = (TextView) view.findViewById(R.id.timeStart);
             this.timeEnding = (TextView) view.findViewById(R.id.timeEnd);
-            this.imgChannel=(ImageView) view.findViewById(R.id.imgChannel);
+            this.imgChannel = (ImageView) view.findViewById(R.id.imgChannel);
 
 
         }
 
-        void build(final String title,  String image,String imgChannel, Date timeStarting, Date timeEnding) {
+        void build(final String title, String image, String imgChannel, Date timeStarting, Date timeEnding) {
             this.title.setText(title);
-           // this.view.setBackgroundColor(color);
-           // imageView.setImageResource(color);
             Picasso.with(context)
                     .load(image)
                     .into(this.imageView);
             Picasso.with(context)
                     .load(imgChannel)
                     .into(this.imgChannel);
-
 
             //set format Starting time
             SimpleDateFormat startTimeFormat = new SimpleDateFormat("EE HH:mm");

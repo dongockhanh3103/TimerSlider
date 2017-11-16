@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         init();
         final List<Program> programList = new ArrayList<Program>();
         list=new ArrayList<Program>();
@@ -64,8 +63,6 @@ public class MainActivity extends AppCompatActivity {
         //get Ending time
         timeEnding = getArrTimeEnding();
 
-
-
         Date maxDate = Collections.max(timeEnding);
         Date minDate = Collections.min(timeStarting);
 
@@ -75,16 +72,14 @@ public class MainActivity extends AppCompatActivity {
         gridView.setAdapter(customGridViewAdapter);
         customGridViewAdapter.notifyDataSetChanged();
 
-
         sliderTimer.listener = new ChangeChanel() {
             @Override
             public void onChangeChanel(String Object) {
                 customGridViewAdapter.getFilter().filter(Object);
+              //  gridView.smoothScrollToPosition(0);
                 return;
             }
-
         };
-
     }
 
     void init() {
@@ -105,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     List<Date> getArrTimeEnding() {
-        //14
         List<Date> listTimeEnding = new ArrayList<Date>();
         for(int i=0; i<list.size();i++){
             listTimeEnding.add(list.get(i).getTimeEnding());
@@ -129,11 +123,9 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Program> parseJson(String json) {
         List<Program> programList = new ArrayList<Program>();
-        StringBuilder builder = new StringBuilder();
         try {
             JSONObject root = new JSONObject(json);
             JSONArray datas = root.getJSONArray("datas");
-            Log.d("count", "parseJson: "+datas.length());
             for (int i = 0; i < datas.length(); i++)
             {
                 JSONObject data = datas.getJSONObject(i);
@@ -149,6 +141,8 @@ public class MainActivity extends AppCompatActivity {
                     String stimeStarting = current_show_slot.getString("from");
                     String stimeEnding = current_show_slot.getString("to");
                     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
+
+                    //push object to model
                     try {
                         Date timeStarting = sdf.parse(stimeStarting);
                         Date timeEnding=sdf.parse(stimeEnding);

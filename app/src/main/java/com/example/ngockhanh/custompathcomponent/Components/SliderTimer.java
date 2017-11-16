@@ -36,6 +36,15 @@ import java.util.GregorianCalendar;
 
 public class SliderTimer extends View {
 
+    public int getSlColor() {
+        return slColor;
+    }
+
+    public void setSlColor(int slColor) {
+        this.slColor = slColor;
+        invalidate();
+    }
+
     int slColor;
     float mDy;
     float mDx;
@@ -95,9 +104,9 @@ public class SliderTimer extends View {
     void init(@Nullable AttributeSet set) {
         if (set == null) return;
         TypedArray ta = getContext().obtainStyledAttributes(set, R.styleable.SliderTimer);
-        slColor = ta.getColor(R.styleable.SliderTimer_sliderColor, Color.RED);
 
-
+        int color=0x4DFF0000;
+        slColor = ta.getColor(R.styleable.SliderTimer_sliderColor, color);
         slText = "";
         mDy = 100;
         mDx = 0;
@@ -163,19 +172,22 @@ public class SliderTimer extends View {
                     itemTimer.setSlY(sliderMaxHeight);
                 }
 
+                itemTimer.setColor(0xFFFF0000);
+
 
                 int mins = (int) roundPercent(this.diffTime, itemTimer.getSlY());
                 Date dt = caculateTime(mins);
-                currentTimeSlider=convertDateToStringFormat(dt);
+                currentTimeSlider = convertDateToStringFormat(dt);
 
 
                 SimpleDateFormat df = new SimpleDateFormat("EE HH:mm");
                 String currentTime = df.format(dt.getTime());
-                String s=convertDateToStringFormat(dt);
+                String s = convertDateToStringFormat(dt);
                 itemTimer.setSlText(currentTime);
                 break;
             case MotionEvent.ACTION_UP:
-                listener.onChangeChanel(""+currentTimeSlider);
+                itemTimer.setColor(0x4DFF0000);
+                listener.onChangeChanel("" + currentTimeSlider);
                 break;
         }
         invalidate();
@@ -183,19 +195,20 @@ public class SliderTimer extends View {
         return true;
     }
 
-    String convertDateToStringFormat(Date date){
+    String convertDateToStringFormat(Date date) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
-        String year=""+calendar.get(Calendar.YEAR);
-        String month=convertForFormat(""+(calendar.get(Calendar.MONTH)+1));
+        String year = "" + calendar.get(Calendar.YEAR);
+        String month = convertForFormat("" + (calendar.get(Calendar.MONTH) + 1));
 
-        String day=convertForFormat(""+calendar.get(Calendar.DAY_OF_MONTH));
-        String hour=convertForFormat(""+calendar.get(Calendar.HOUR_OF_DAY));
-        String minutes=convertForFormat(""+calendar.get(Calendar.MINUTE));
+        String day = convertForFormat("" + calendar.get(Calendar.DAY_OF_MONTH));
+        String hour = convertForFormat("" + calendar.get(Calendar.HOUR_OF_DAY));
+        String minutes = convertForFormat("" + calendar.get(Calendar.MINUTE));
 
 
-        return year+month+day+hour+minutes;
+        return year + month + day + hour + minutes;
     }
+
     Date caculateTime(int mins) {
 
         final java.util.Calendar cal = GregorianCalendar.getInstance();
@@ -205,17 +218,15 @@ public class SliderTimer extends View {
     }
 
     //covert Datetime to format yyyyMMddhhmm
-    String convertForFormat(String time){
-        if(time.length()<2){
-            return time ="0"+time;
+    String convertForFormat(String time) {
+        if (time.length() < 2) {
+            return time = "0" + time;
         }
         return time;
 
     }
 
     float roundPercent(long diffTime, float y) {
-
-
         return (float) ((y - 100) * (diffTime / 1300.0));
     }
 
@@ -225,6 +236,20 @@ public class SliderTimer extends View {
         private Paint paintTriangular;
         private Paint paintRectangle;
         private Paint paintText;
+
+        public int getColor() {
+            return color;
+        }
+
+        public void setColor(int color) {
+            this.color = color;
+            paintRectangle = new Paint(Paint.ANTI_ALIAS_FLAG);
+            paintRectangle.setColor(color);
+           invalidate();
+
+        }
+
+        private int color;
 
 
         public String getSlText() {
@@ -263,21 +288,13 @@ public class SliderTimer extends View {
 
 
         void DrawItemTimer(Canvas canvas) {
-            int paddingTop=100;
-            int width=200;
+            int paddingTop = 100;
+            int width = 200;
             canvas.drawRoundRect(new RectF(slX, slY, slX + width, slY + paddingTop), 0, 100, paintRectangle);
 
             paintText.setTextAlign(Paint.Align.CENTER);
             paintText.setTextSize(35);
             canvas.drawText(this.slText, slX + 80, slY + 60, paintText);
-//            CustomAnalogClock clock = null;
-//            clock.init(getContext(), R.drawable.default_face, R.drawable.default_hour_hand, R.drawable.default_minute_hand, 0, false, false);
-//            clock.setX(0);
-//            clock.setY(100);
-//            clock.setScale(100);
-
-
-
 
 
         }

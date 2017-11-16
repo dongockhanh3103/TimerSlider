@@ -10,44 +10,38 @@ public class Program {
     String title;
     Date timeStarting;
     Date timeEnding;
-    int color;
     String image;
     String imgChannel;
+    public Program() {
+    }
 
-    public Program(){};
-    public Program(String title, String image, String imgChannel,Date timeStarting,Date timeEnding){
-        this.title=title;
-        this.image=image;
-        this.imgChannel=imgChannel;
-        this.timeStarting=timeStarting;
-        this.timeEnding=timeEnding;
-    };
+
+    public Program(String title, String image, String imgChannel, Date timeStarting, Date timeEnding) {
+        this.title = title;
+        this.image = image;
+        this.imgChannel = imgChannel;
+        this.timeStarting = timeStarting;
+        this.timeEnding = timeEnding;
+    }
+
+
     public String getImgChannel() {
         return imgChannel;
     }
-
     public void setImgChannel(String imgChannel) {
         this.imgChannel = imgChannel;
     }
 
-
-
     public String getImage() {
         return image;
     }
-
     public void setImage(String image) {
         this.image = image;
     }
 
-
-
-
-
     public Date getTimeStarting() {
         return timeStarting;
     }
-
     public void setTimeStarting(Date timeStarting) {
         this.timeStarting = timeStarting;
     }
@@ -55,27 +49,16 @@ public class Program {
     public Date getTimeEnding() {
         return timeEnding;
     }
-
     public void setTimeEnding(Date timeEnding) {
         this.timeEnding = timeEnding;
     }
 
 
-
     public String getTitle() {
         return title;
     }
-
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public int getColor() {
-        return color;
-    }
-
-    public void setColor(int color) {
-        this.color = color;
     }
 
 
